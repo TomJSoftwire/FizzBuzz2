@@ -5,7 +5,8 @@ public class fizzBuzz {
     basicRule ruleFezz = new basicRule(13,"Fezz");
     basicRule ruleBuzz = new basicRule(5,"Buzz");
     basicRule ruleBang = new basicRule(7,"Bang");
-    RuleBong ruleBong = new RuleBong();
+    RuleBong ruleBong = new RuleBong(11,"Bong");
+    ruleReverse ruleRev = new ruleReverse(17);
     public String getFizzBuzz(int number){
         String result = "";
         result = ruleFizz.applyRule(number,result);
@@ -13,6 +14,7 @@ public class fizzBuzz {
         result = ruleBuzz.applyRule(number,result);
         result = ruleBang.applyRule(number,result);
         result = ruleBong.applyRule(number,result);
+        result = ruleRev.applyRule(number,result);
         return (result.equals("")) ? Integer.toString(number) : result;
     }
 }
